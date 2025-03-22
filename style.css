@@ -96,12 +96,15 @@ li {
   padding: 15px;
   text-align: center;
   box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 8px;
 }
 
 .project-img {
   width: 100%;
   max-width: 400px;
-  height: 200px;
+  height: auto;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -163,10 +166,12 @@ footer i:hover {
   }
 
   .project-img {
-    height: 150px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
   }
 
   body {
     padding: 10px;
   }
-} 
+}
