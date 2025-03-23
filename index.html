@@ -4,11 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <title>Saicharan Veldurthy - Portfolio</title>
 </head>
 <body>
-  <header>
+  <header data-aos="fade-down">
     <h1>Saicharan Veldurthy</h1>
     <p>Cloud & DevOps | Data Engineering | Python, AWS, GCP, CI/CD, Kubernetes | Scalable Solutions & Automation </p>
     <nav>
@@ -21,7 +22,7 @@
     </nav>
   </header>
 
-  <section id="about">
+  <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
     <div class="about-container">
       <img src="Main.jpg" alt="Saicharan Veldurthy" class="profile-img" />
@@ -29,7 +30,7 @@
     </div>
   </section>
 
-  <section id="experience">
+  <section id="experience" data-aos="fade-left">
     <h2>Experience</h2>
     <h3>System Engineer - Infosys Pvt. Ltd. (06/2021 - 11/2022)</h3>
     <ul>
@@ -43,45 +44,34 @@
     </ul>
   </section>
 
-  <section id="projects">
+  <section id="projects" data-aos="fade-up">
     <h2>Projects</h2>
     <div class="project-container">
-      <div class="project">
+      <div class="project" data-aos="zoom-in">
         <img src="Image1.jpg" alt="Project 1 Image" class="project-img">
         <h3>Virtual Machine Deployment on Cloud</h3>
         <p>Automated VM deployment using Terraform on AWS and GCP with hands-on experience in cloud networking and security.</p>
         <p><strong>Skills Gained:</strong> Terraform, AWS, GCP, VM Deployment Automation, Cloud Networking, Cloud Security, Infrastructure as Code (IaC)</p>
         <p>
-          <a href="https://github.com/yourusername/project1" target="_blank"><i class="fab fa-github"></i> GitHub</a> |
-          <a href="https://www.youtube.com/watch?v=g2Il8cxNv18&ab_channel=KahanDataSolutions" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+          <a href="https://github.com/veldurthys1-git/project1" target="_blank"><i class="fab fa-github"></i>GitHub</a> |
+          <a href="https://www.youtube.com/watch?v=g2Il8cxNv18&ab_channel=KahanDataSolutions" target="_blank"><i class="fab fa-youtube"></i>YouTube</a>
         </p>
       </div>
-      <div class="project">
+
+      <div class="project" data-aos="zoom-in">
         <img src="Image2.jpg" alt="Project 2 Image" class="project-img">
         <h3>Sales Forecasting Using Machine Learning</h3>
         <p>I created a sales forecasting model with Scikit-learn and visualized the data using Matplotlib for insights.</p>
         <p><strong>Skills Gained:</strong> Scikit-learn, Data Visualization (Matplotlib), Sales Forecasting, Machine Learning, Data Analysis</p>
         <p>
-          <a href="https://github.com/yourusername/project2" target="_blank"><i class="fab fa-github"></i> GitHub</a> |
+          <a href="https://github.com/veldurthys1-git/project2" target="_blank"><i class="fab fa-github"></i> GitHub</a> |
           <a href="https://www.youtube.com/watch?v=pCuV_7H2vyQ&ab_channel=NicholasRenotte" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
         </p>
       </div>
     </div>
   </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li><strong>Programming Languages:</strong> Python, Java, JavaScript, SQL</li>
-      <li><strong>Cloud Platforms:</strong> Google Cloud Platform (GCP), AWS</li>
-      <li><strong>Databases:</strong> PostgreSQL, MySQL, SQL Server</li>
-      <li><strong>Development & Deployment:</strong> CI/CD (GitHub Actions, Jenkins), Docker, Kubernetes</li>
-      <li><strong>Data Engineering:</strong> ETL Pipelines, Data Processing, API Integration</li>
-      <li><strong>Software Development:</strong> RESTful APIs, Object-Oriented Programming (OOP), Agile Methodologies</li>
-    </ul>
-  </section>
-
-  <section id="education">
+  <section id="education" data-aos="fade-right">
     <h2>Education</h2>
     <p>Master's in Computer Science, University of Dayton (01/2023 - 12/2024)</p>
     <p>Bachelor's in Electronics and Communication Engineering, Gurunanak Institutions Technical Campus (08/2016 - 10/2020)</p>
@@ -99,16 +89,10 @@
     </p>
   </footer>
 
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    const navLinks = document.querySelectorAll('nav a');
-    navLinks.forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
+    AOS.init();
   </script>
 </body>
 </html>
